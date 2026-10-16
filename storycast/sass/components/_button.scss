@@ -1,0 +1,74 @@
+// =============================================================
+// Buttons + badges (layer: components)
+// =============================================================
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+    min-height: 2.75rem;   // 44px touch target
+    padding: $space-2 $space-5;
+    border: 2px solid $color-primary;
+    border-radius: $radius-pill;
+    background: $color-primary;
+    color: $color-on-primary;
+    font-weight: $fw-semibold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background $transition, color $transition;
+
+    &:hover {
+      background: $color-text;
+      border-color: $color-text;
+      color: $color-on-primary;
+    }
+
+    &--outline {
+      background: transparent;
+      color: $color-primary;
+
+      &:hover {
+        background: $color-primary;
+        border-color: $color-primary;
+      }
+    }
+
+    &--small {
+      min-height: 2.5rem;
+      padding-inline: $space-4;
+      font-size: $fs-sm;
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.125rem $space-2;
+    border-radius: $radius-sm;
+    background: $color-highlight;
+    color: $color-text;
+    font-size: $fs-xs;
+    font-weight: $fw-bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    &--video {
+      background: $color-accent;
+      color: $color-on-primary;
+    }
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: $space-3;
+    color: $color-primary;
+    font-size: $fs-sm;
+    font-weight: $fw-bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}

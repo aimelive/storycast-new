@@ -1,0 +1,31 @@
+// =============================================================
+// Spacing, size and shape tokens
+// One 4px-based scale used for every margin, padding and gap.
+// =============================================================
+
+$space-1: 0.25rem;  //  4px
+$space-2: 0.5rem;   //  8px
+$space-3: 0.75rem;  // 12px
+$space-4: 1rem;     // 16px
+$space-5: 1.5rem;   // 24px
+$space-6: 2rem;     // 32px
+$space-7: 3rem;     // 48px
+$space-8: 4.5rem;   // 72px
+
+$section-gap: clamp($space-7, 6vw, $space-8);
+
+$radius-sm: 6px;
+$radius:    12px;
+$radius-pill: 999px;
+
+$border-width: 1px;
+$focus-width: 3px;
+
+$container-max: 72rem;   // 1152px
+$prose-max: 42rem;       // comfortable reading line length
+
+// Breakpoints (used by the respond mixin)
+$bp-md: 48rem;   // 768px
+$bp-lg: 64rem;   // 1024px
+
+$transition: 180ms ease;
