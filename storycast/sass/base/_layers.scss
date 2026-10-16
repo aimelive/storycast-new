@@ -1,7 +1,0 @@
-// =============================================================
-// Cascade layer order — declared once, lowest priority first.
-// Each partial puts its rules in one of these layers, so a
-// utility always beats a component, which always beats base
-// styles, no matter selector specificity or file order.
-// =============================================================
-@layer reset, base, layout, components, utilities;
