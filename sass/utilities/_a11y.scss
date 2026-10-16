@@ -1,0 +1,31 @@
+// =============================================================
+// Accessibility utilities (layer: utilities, highest priority)
+// =============================================================
+@use "../abstracts/colors" as *;
+@use "../abstracts/spacing" as *;
+@use "../abstracts/mixins" as *;
+
+@layer utilities {
+  .visually-hidden {
+    @include visually-hidden;
+  }
+
+  // Skip link: hidden until focused with Tab
+  .skip-link {
+    position: absolute;
+    top: $space-2;
+    left: $space-2;
+    z-index: 100;
+    padding: $space-2 $space-4;
+    border-radius: $radius-sm;
+    background: $color-text;
+    color: $color-surface;
+    font-weight: 700;
+    transform: translateY(-200%);
+
+    &:focus {
+      transform: none;
+      color: $color-surface;
+    }
+  }
+}

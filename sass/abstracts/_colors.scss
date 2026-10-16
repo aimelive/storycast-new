@@ -1,0 +1,33 @@
+// =============================================================
+// Color tokens
+// Palette inspired by the Rwandan flag (sky blue, sun yellow,
+// green) on a warm paper background. Every text pairing below
+// was checked against WCAG 2.1 AA (4.5:1 for normal text).
+// =============================================================
+
+// Raw palette
+$paper:      #FAF7F0;
+$white:      #FFFFFF;
+$ink:        #14201A;   // 15.7:1 on paper
+$ink-soft:   #4A5850;   //  7.0:1 on paper
+$green:      #1B6B45;   //  6.1:1 on paper, white on green 6.5:1
+$green-tint: #E8F1EC;   // green on tint 5.6:1
+$sky:        #0F5D8C;   //  6.6:1 on paper
+$sun:        #F2C230;   // only as a background behind $ink (10:1)
+$line:       #E3DDD0;   // decorative borders only
+$mist:       #C9D3CD;   // light text on $ink (10.9:1)
+
+// Semantic tokens: components use these, never the raw palette
+$color-bg:            $paper;
+$color-surface:       $white;
+$color-text:          $ink;
+$color-text-muted:    $ink-soft;
+$color-primary:       $green;
+$color-primary-tint:  $green-tint;
+$color-on-primary:    $white;
+$color-accent:        $sky;
+$color-highlight:     $sun;
+$color-border:        $line;
+$color-focus:         $sky;
+$color-footer-bg:     $ink;
+$color-footer-text:   $mist;

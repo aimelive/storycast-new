@@ -1,0 +1,94 @@
+// =============================================================
+// Feature cards, access list, engage cards, contact
+// (layer: components)
+// =============================================================
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/spacing" as *;
+
+@layer components {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    padding: $space-5;
+    background: $color-surface;
+    border: $border-width solid $color-border;
+    border-radius: $radius;
+
+    &__icon {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: $radius-sm;
+      background: $color-primary-tint;
+      color: $color-primary;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    &__title {
+      font-size: $fs-md;
+    }
+
+    &__text {
+      color: $color-text-muted;
+    }
+
+    &__link {
+      margin-top: auto;
+      font-weight: $fw-semibold;
+    }
+  }
+
+  // Mission block on About
+  .mission {
+    display: grid;
+    gap: $space-6;
+
+    @media (min-width: 64rem) {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+    }
+
+    &__quote {
+      margin: 0;
+      padding-left: $space-5;
+      border-left: 4px solid $color-highlight;
+      font-family: $font-heading;
+      font-size: $fs-lg;
+      line-height: $lh-snug;
+    }
+
+    p + p {
+      margin-top: $space-4;
+    }
+  }
+
+  // Contact
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-5;
+    padding: $space-6;
+    background: $color-surface;
+    border: $border-width solid $color-border;
+    border-left: 6px solid $color-primary;
+    border-radius: $radius;
+
+    &__text {
+      margin-top: $space-2;
+      color: $color-text-muted;
+    }
+
+    address {
+      font-style: normal;
+    }
+  }
+}
